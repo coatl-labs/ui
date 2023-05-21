@@ -1,0 +1,67 @@
+// PARAGRAPHS
+p {
+  line-height: 1.8;
+  color: var(--textColor);
+}
+
+// HEADINGS
+h6 {
+  font-size: 1rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h6,
+h5,
+h4,
+h3,
+h2,
+h1 {
+  color: var(--titleColor);
+}
+
+// TEXT STYLES
+
+strong,
+em,
+b,
+i {
+  color: var(--titleColor);
+  font-weight: 500;
+}
+
+mark {
+  background-color: var(--bgMark);
+  color: var(--textMark);
+  width: max-content;
+  border-radius: .3em;
+  padding: 0em .5em;
+}
+
+// LINKS
+
+a {
+  color: var(--textLink);
+
+  &:hover {
+    color: var(--textLinkHover);
+  }
+}

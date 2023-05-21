@@ -1,0 +1,8 @@
+img,
+video {
+  border-radius: var(--borderRadius);
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border: solid 1px var(--bcImage);
+}

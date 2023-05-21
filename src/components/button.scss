@@ -1,0 +1,31 @@
+button {
+  font-size: .8rem;
+  cursor: pointer;
+  outline: none;
+  border: solid .1em var(--bcButton);
+  padding: 1em 2em;
+  border-radius: .5em;
+  background-color: var(--bgButton);
+  font-weight: 500;
+  transition: background-color var(--transitionDuration) var(--transitionFunction);
+
+  &:hover,
+  &:focus {
+    background-color: var(--bgButtonHover);
+  }
+
+  &[role='button'] {
+    width: max-content;
+  }
+
+  &[data-color='primary'] {
+    background-color: var(--bgButtonPrimary);
+    border-color: var(--bcButtonPrimary);
+    color: var(--primaryColor);
+
+    &:hover,
+    &:focus {
+      background-color: var(--bgButtonPrimaryHover);
+    }
+  }
+}

@@ -1,0 +1,145 @@
+@import './mixins.scss';
+
+:root {
+  // main
+  --colorScheme: dark;
+
+  // layout
+  --pdLayout: 1em;
+
+  @include media('fold') {
+    --pdLayout: 2em;
+  }
+
+  @include media('tablet') {
+    --pdLayout: 4em;
+  }
+
+  @include media('portatil') {
+    --pdLayout: 6em;
+  }
+
+  @include media('desktop') {
+    --pdLayout: 10em;
+  }
+
+  // z-index
+  --blurZIndex: -1;
+  --borderRadius: 0.5em;
+  --transitionDuration: 0.2s;
+  --transitionFunction: ease-in-out;
+}
+
+
+html[data-theme='dark'] {
+  --colorScheme: dark;
+  // body
+  --bgBody: rgb(1, 2, 6);
+
+  // body effects
+  --bgBodyBlur1: rgba(0, 123, 255, 0.2);
+  --bgBodyBlur2: rgba(140, 0, 255, 0.2);
+
+  // typography
+  --textColor: rgb(212, 211, 224);
+  --titleColor: rgb(244, 247, 255);
+  --textMark: rgb(0, 123, 255);
+  --bgMark: rgba(0, 123, 255, 0.2);
+  --textLink: rgb(0, 123, 255);
+  --textLinkHover: rgb(39, 144, 255);
+
+
+  // button
+  --bgButton: rgba(255, 255, 255, 0.036);
+  --bcButton: rgba(255, 255, 255, 0.05);
+  --bgButtonHover: rgba(255, 255, 255, 0.05);
+  --bgButtonPrimary: rgba(0, 123, 255, 0.123);
+  --bcButtonPrimary: rgba(0, 123, 255, 0.2);
+  --bgButtonPrimaryHover: rgba(0, 123, 255, 0.2);
+
+  // input
+  --bgInput: rgba(255, 255, 255, 0.036);
+  --bcInput: rgba(255, 255, 255, 0.05);
+
+  // multimedia
+  --bcImage: rgba(255, 255, 255, 0.05);
+
+  // table
+  --bgHeadTable: rgba(255, 255, 255, 0.05);
+  --bcTable: rgba(255, 255, 255, 0.05);
+
+  // checkbox
+  --bgCheckbox: rgba(255, 255, 255, 0.036);
+  --bcCheckbox: rgba(255, 255, 255, 0.05);
+  --bgCheckboxHover: rgba(255, 255, 255, 0.05);
+  --bgCheckboxChecked: rgba(0, 123, 255, 0.123);
+  --bcCheckboxChecked: rgba(0, 123, 255, 0.2);
+  --markCheckboxChecked: rgb(0, 123, 255);
+
+  // switch
+  --bgSwitchMark: rgba(255, 255, 255, 0.225);
+  --bgSwitchMarkActive: rgb(0, 123, 255);
+
+  // radio
+  --bgRadioMarkActive: rgb(0, 123, 255);
+
+  // summary & details
+  --bgSummary: rgba(255, 255, 255, 0.036);
+  --bcSummary: rgba(255, 255, 255, 0.05);
+}
+
+html[data-theme='light'] {
+  --colorScheme: light;
+  // body
+  --bgBody: rgb(255, 255, 255);
+
+  // body effects
+  --bgBodyBlur1: rgba(0, 123, 255, 0.2);
+  --bgBodyBlur2: rgba(140, 0, 255, 0.2);
+
+  // typography
+  --textColor: rgb(0, 0, 0);
+  --titleColor: rgb(0, 0, 0);
+  --textMark: rgb(0, 123, 255);
+  --bgMark: rgba(0, 123, 255, 0.2);
+  --textLink: rgb(0, 123, 255);
+  --textLinkHover: rgb(39, 144, 255);
+
+  // button
+  --bgButton: rgba(0, 0, 0, 0.036);
+  --bcButton: rgba(0, 0, 0, 0.05);
+  --bgButtonHover: rgba(0, 0, 0, 0.05);
+  --bgButtonPrimary: rgba(0, 123, 255, 0.123);
+  --bcButtonPrimary: rgba(0, 123, 255, 0.2);
+  --bgButtonPrimaryHover: rgba(0, 123, 255, 0.2);
+
+  // input
+  --bgInput: rgba(0, 0, 0, 0.036);
+  --bcInput: rgba(0, 0, 0, 0.05);
+
+  // multimedia
+  --bcImage: rgba(0, 0, 0, 0.05);
+
+  // table
+  --bgHeadTable: rgba(0, 0, 0, 0.05);
+  --bcTable: rgba(0, 0, 0, 0.05);
+
+  // checkbox
+  --bgCheckbox: rgba(0, 0, 0, 0.036);
+  --bcCheckbox: rgba(0, 0, 0, 0.05);
+  --bgCheckboxHover: rgba(0, 0, 0, 0.05);
+  --bgCheckboxChecked: rgba(0, 123, 255, 0.123);
+  --bcCheckboxChecked: rgba(0, 123, 255, 0.2);
+  --markCheckboxChecked: rgb(0, 123, 255);
+
+  // switch
+  --bgSwitchMark: rgba(0, 0, 0, 0.225);
+  --bgSwitchMarkActive: rgb(0, 123, 255);
+
+  // radio
+  --bgRadioMarkActive: rgb(0, 123, 255);
+
+  // summary & details
+  --bgSummary: rgba(0, 0, 0, 0.036);
+  --bcSummary: rgba(0, 0, 0, 0.05);
+}

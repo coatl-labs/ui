@@ -1,0 +1,46 @@
+details {
+  border-radius: var(--borderRadius);
+  border: solid .1em var(--bcSummary);
+
+  summary {
+    background-color: var(--bgSummary);
+    border-radius: var(--borderRadius);
+
+    cursor: pointer;
+    padding: .6em 1em;
+    display: block;
+    position: relative;
+    transition: margin var(--transitionDuration) var(--transitionFunction);
+
+    &::after {
+      position: absolute;
+      right: 1em;
+      top: 50%;
+      width: 1em;
+      height: 1em;
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='ionicon' viewBox='0 0 512 512'%3E%3Cpath fill='none' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='48' d='M184 112l144 144-144 144'/%3E%3C/svg%3E");
+      transform: rotate(0deg) translate(0, -50%);
+      filter: invert(1);
+      transition: transform var(--transitionDuration) var(--transitionFunction);
+    }
+  }
+
+  &[open] {
+    padding-bottom: 1em;
+
+    summary {
+      margin-bottom: 1em;
+      border-radius: calc(var(--borderRadius) - .1em);
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+
+      &::after {
+        transform: rotate(90deg) translate(-50%, 0%);
+      }
+    }
+  }
+
+  &>:not(summary) {
+    padding-inline: 1em;
+  }
+}

@@ -1,0 +1,10 @@
+input,
+textarea {
+  outline: none;
+  border: solid .1em var(--bcInput);
+  padding: 1em 2em;
+  border-radius: var(--borderRadius);
+  background-color: var(--bgInput);
+  font-weight: 400;
+  transition: background-color var(--transitionDuration) var(--transitionFunction);
+}

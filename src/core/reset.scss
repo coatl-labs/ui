@@ -1,0 +1,45 @@
+@import './variables.scss';
+@import './modules.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui;
+}
+
+html {
+  font-size: 18px;
+  color-scheme: var(--colorScheme);
+}
+
+body {
+  background-color: var(--bgBody);
+
+  &:after,
+  &:before {
+    position: fixed;
+    z-index: var(--blurZIndex);
+    content: '';
+    width: 15em;
+    height: 15em;
+    filter: blur(100px);
+  }
+
+  &:after {
+    background-color: var(--bgBodyBlur1);
+    top: 5em;
+    left: var(--pdLayout);
+  }
+
+  &:before {
+    background-color: var(--bgBodyBlur2);
+    bottom: 5em;
+    right: var(--pdLayout);
+  }
+
+  &>section {
+
+    padding-inline: var(--pdLayout)
+  }
+}
